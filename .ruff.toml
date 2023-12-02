@@ -1,0 +1,41 @@
+line-length    = 120
+preview        = true
+select         = ["ALL"]
+target-version = "py311"
+
+ignore = [
+    'CPY',
+    'FIX',
+    'N818',
+    'PGH003',
+    'TCH',
+    'TD002',
+    'TD003',
+
+    "EM101",
+    "ERA001",
+    "TRY003",
+
+    # Conflicting rules with format (https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules)
+    "COM812",
+    "COM819",
+    "D206",
+    "D300",
+    "E111",
+    "E114",
+    "E117",
+    "ISC001",
+    "ISC002",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "W191",
+]
+
+[isort]
+known-first-party = ["src"]
+required-imports  = ["from __future__ import annotations"]
+
+[pydocstyle]
+convention = "numpy"
